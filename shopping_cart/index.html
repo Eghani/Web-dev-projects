@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Shopping Cart</h1>
+        
+        <!-- Add Item Form -->
+        <div class="add-item">
+            <h2>Add Item</h2>
+            <input type="text" id="itemName" placeholder="Item Name" required>
+            <input type="number" id="itemPrice" placeholder="Item Price" required>
+            <input type="number" id="itemQuantity" placeholder="Quantity" required>
+            <button id="addItemBtn">Add Item</button>
+        </div>
+
+        <!-- Cart Display -->
+        <div class="cart">
+            <h2>Cart</h2>
+            <table id="cartTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Items will be dynamically added here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Total Calculation -->
+        <div id="discountMessage" style="margin-top: 10px; font-weight: bold;"></div>
+        <div class="total">
+            <h2>Total</h2>
+            <p id="totalBeforeDiscount">Total Before Discount: ₹0</p>
+            <p id="discount">Discount: ₹0</p>
+            <p id="finalTotal">Total After Discount: ₹0</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="copyrights">
+        Made by Kabir 🗿
+    </footer>
+</body>
+</html>

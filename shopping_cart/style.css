@@ -1,0 +1,89 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a2e;
+    color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #162447;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.title {
+    text-align: center;
+    color: #e43f5a;
+}
+
+/* Add Item Section */
+.add-item {
+    margin-bottom: 20px;
+}
+
+.add-item input, .add-item button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: #e43f5a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #d81e5b;
+}
+
+/* Cart Table */
+.cart table {
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+
+.cart th, .cart td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #444;
+}
+
+.cart th {
+    background-color: #1f4068;
+    color: white;
+}
+
+.cart td {
+    background-color: #1a1a2e;
+}
+
+.cart button {
+    background-color: #e43f5a;
+    color: white;
+}
+
+/* Total Section */
+.total {
+    margin-top: 20px;
+    text-align: right;
+    font-size: 1.2rem;
+    color: #f5f5f5;
+}
+
+.copyrights{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
