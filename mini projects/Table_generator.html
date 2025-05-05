@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body style="font-family: 'Times New Roman', Times, serif;">
+    <div class="container-fluid">
+        <nav class="navbar bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    Table generator
+                </a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-md-12 col-sm-12">
+            <div class="card">
+                <div class="card-header">
+                    Table
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="card-title">Enter a number to generate table</h5>
+                    <input type="number" name="" id="table_number" class="form-control" onkeypress="cleartable()"
+                        style="width: 200px; margin: auto;">
+                    <button class="btn btn-primary m-2" onclick="generatetable()">Generate</button>
+                </div>
+            </div>
+            <footer style="margin-top: 30px; font-size: 35px;">
+                <p><i>Made by Ghani !</i></p>
+            </footer>
+        </div>
+
+        <div class="col-lg-6 col-md-12 col-sm-12  text-center " id="output_div" style="font-size: 40px; ">
+
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+        function generatetable() {
+            var number = document.getElementById('table_number').value;
+            if (number.toString().length == 0) {
+                alert('Please enter a number to generate table !');
+                return;
+            }
+            var output = '';
+            for (var x = 1; x <= 10; x++) {
+                var next_number = number * x;
+                var statement = number + ' x ' + x + ' = ' + next_number + '<br>';
+                output = output + statement;
+            }
+            document.getElementById('output_div').innerHTML = output;
+        }
+        function cleartable() {
+            document.getElementById('output_div').innerHTML = '';
+        }
+    </script>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
