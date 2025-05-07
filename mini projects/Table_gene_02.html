@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Table Generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+  </head>
+  <body style="font-family: 'Times New Roman', Times, serif;">
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">Table Generator</span>
+        </div>
+      </nav>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-lg-6 col-md-6 col-sm-12">
+                <h3><i>Enter a Number to Generate table</i></h3>
+                <input type="number" id="n_f" class="form-control" style="width: 200px;" onkeypress="start_new()">
+                <button class="btn btn-primary mt-2" onclick="start_table() " id="gen_btn"> Generate Now </button>
+                <button class="btn btn-primary mt-2 d-none" id="next_btn" onclick="print_next()"> Next </button>
+                <footer style="margin-top: 30px; font-size: 25px;">
+                    <p><i>Made by Ghani !</i></p>
+                </footer>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12" id="output">
+
+            </div>
+        </div>
+
+    </div>
+
+ 
+
+    <script>
+
+        var next_number = 1;
+
+        function start_new(){
+            document.getElementById('gen_btn').classList.remove('d-none');
+            document.getElementById('next_btn').classList.add('d-none');
+            document.getElementById('output').innerHTML = '';
+        }
+        
+        function start_table(){
+            next_number = 1;
+            var number = document.getElementById('n_f').value;
+            if(number.toString().trim().length == 0){
+                alert('Please enter a number to generate table');
+                return;
+            }
+            var os = number + ' x ' + ' 1 ' + ' = ' + number ;
+            var output_badge = `<h2> <span class="badge text-bg-warning">${os}</span></h2>`;
+            var output_element = document.getElementById('output');
+            output_element.innerHTML = output_badge;
+            
+            document.getElementById('gen_btn').classList.add('d-none');
+            document.getElementById('next_btn').classList.remove('d-none');
+            next_number++;
+            
+        }
+        function print_next(){
+            var number = document.getElementById('n_f').value;
+            var os = number + ' x ' + next_number + ' = ' + number * next_number ;
+            var output_badge = `<h2> <span class="badge text-bg-warning">${os}</span></h2>`;
+
+            var output_element = document.getElementById('output');
+            output_element.insertAdjacentHTML('beforeend' , output_badge);
+            next_number++;
+            
+        }
+    </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+  </body>
+</html>
