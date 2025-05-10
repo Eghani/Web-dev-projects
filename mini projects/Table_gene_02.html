@@ -34,7 +34,7 @@
 
     <script>
 
-        var next_number = 1;
+        let next_number = 1;
 
         function start_new(){
             document.getElementById('gen_btn').classList.remove('d-none');
@@ -44,14 +44,14 @@
         
         function start_table(){
             next_number = 1;
-            var number = document.getElementById('n_f').value;
+            let number = document.getElementById('n_f').value;
             if(number.toString().trim().length == 0){
                 alert('Please enter a number to generate table');
                 return;
             }
-            var os = number + ' x ' + ' 1 ' + ' = ' + number ;
-            var output_badge = `<h2> <span class="badge text-bg-warning">${os}</span></h2>`;
-            var output_element = document.getElementById('output');
+            let os = number + ' x ' + ' 1 ' + ' = ' + number ;
+            let output_badge = `<h2> <span class="badge text-bg-warning">${os}</span></h2>`;
+            let output_element = document.getElementById('output');
             output_element.innerHTML = output_badge;
             
             document.getElementById('gen_btn').classList.add('d-none');
@@ -60,11 +60,11 @@
             
         }
         function print_next(){
-            var number = document.getElementById('n_f').value;
-            var os = number + ' x ' + next_number + ' = ' + number * next_number ;
-            var output_badge = `<h2> <span class="badge text-bg-warning">${os}</span></h2>`;
+            let number = document.getElementById('n_f').value;
+            let os = number + ' x ' + next_number + ' = ' + number * next_number ;
+            let output_badge = `<h2> <span class="badge text-bg-warning">${os}</span></h2>`;
 
-            var output_element = document.getElementById('output');
+            let output_element = document.getElementById('output');
             output_element.insertAdjacentHTML('beforeend' , output_badge);
             next_number++;
             

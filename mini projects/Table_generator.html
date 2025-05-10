@@ -51,15 +51,15 @@
 
     <script>
         function generatetable() {
-            var number = document.getElementById('table_number').value;
+            let number = document.getElementById('table_number').value;
             if (number.toString().length == 0) {
                 alert('Please enter a number to generate table !');
                 return;
             }
-            var output = '';
-            for (var x = 1; x <= 10; x++) {
-                var next_number = number * x;
-                var statement = number + ' x ' + x + ' = ' + next_number + '<br>';
+            let output = '';
+            for (let x = 1; x <= 10; x++) {
+                let next_number = number * x;
+                let statement = number + ' x ' + x + ' = ' + next_number + '<br>';
                 output = output + statement;
             }
             document.getElementById('output_div').innerHTML = output;
