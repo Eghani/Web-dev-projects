@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Survey Form</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <h1 id="title">Feedback Survey Form</h1>
+  <p id="description">Please fill out this short survey to help us improve the learning experience.</p>
+
+  <form id="survey-form">
+    <label id="name-label" for="name">Full Name:</label>
+    <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+
+    <label id="email-label" for="email">Email Address:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+    <label id="number-label" for="number">Age:</label>
+    <input type="number" id="number" name="age" placeholder="Enter your age" min="10" max="99" required />
+
+    <label for="dropdown">Select your current role:</label>
+    <select id="dropdown" name="role">
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+      <option value="other">Other</option>
+    </select>
+
+    <p>How satisfied are you with our teaching?</p>
+    <label><input type="radio" name="satisfaction" value="very-satisfied" /> Very Satisfied</label>
+    <label><input type="radio" name="satisfaction" value="satisfied" /> Satisfied</label>
+    <label><input type="radio" name="satisfaction" value="neutral" /> Neutral</label>
+    <label><input type="radio" name="satisfaction" value="dissatisfied" /> Dissatisfied</label>
+
+    <p>What topics are you interested to learn in the future? (Select all that apply)</p>
+    <label><input type="checkbox" name="interest" value="web-dev" /> Web Development</label>
+    <label><input type="checkbox" name="interest" value="ai" /> Artificial Intelligence</label>
+    <label><input type="checkbox" name="interest" value="data-science" /> Data Science</label>
+    <label><input type="checkbox" name="interest" value="cybersecurity" /> Cybersecurity</label>
+
+    <p>We would love to know your thoughts</p>
+    <textarea name="comments" rows="4" cols="40" placeholder="Type your comments here..."></textarea>
+
+    <button id="submit" type="submit">Submit</button>
+  </form>
+  <footer>
+    <p><a href="https://www.linkedin.com/in/mohammad-ehteshamul-ghani-175147274/" target="_blank"><i>@Ehteshamul Ghani</i></a></p>
+  </footer>
+</body>
+</html>
